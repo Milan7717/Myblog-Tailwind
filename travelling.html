@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Milan - A story to be told.</title>
+</head>
+
+<body>
+
+
+
+  <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+    <div class="container-fluid flex flex-wrap items-center justify-between mx-auto">
+      <a href="./index.html" class="flex items-center">
+
+        <img src="./img/bloglogo.png" class="h-10 rounded-lg sm:h-12 md:ml-4" alt="Flowbite Logo" />
+
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-xl  md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="./index.html"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="./blog.html"
+              class="block py-2 pl-3 pr-4  sm:text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li>
+          <li>
+            <a href="./portfolio.html"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="./contact.html"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ---------------carousel------------- -->
+
+  <div id="travelling-carousel" class="relative" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 lg:h-[692px] overflow-hidden rounded-lg sm:h-96">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./travelling-img/boudha1.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover lg:h-[692px] sm:h-96 h-56"
+          alt="...">
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./travelling-img/view2.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover lg:h-[692px] sm:h-96 h-56"
+          alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./travelling-img/pashupati1.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover lg:h-[692px] sm:h-96 h-56"
+          alt="...">
+      </div>
+
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button"
+      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev>
+      <span
+        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+          stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button type="button"
+      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next>
+      <span
+        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+          stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+
+
+  <div class="p-4 my-4">
+    <h1 class="text-center font-bold text-2xl mt-3 mb-6 md:text-4xl underline">Travel: A Pathway to Happiness and
+      Fulfillment</h1>
+    <div class="mx-4 py-2 md:py-4 ">
+      <p class="md:text-xl text-lg indent-12 text-justify ">Traveling is one of the most enriching experiences
+        one can have. It broadens our horizons, exposes us to new
+        cultures and ways of life, and allows us to disconnect from our daily routines. Whether you're traveling solo,
+        with friends or family, or even for work, every trip is a chance to learn something new and create unforgettable
+        memories. From exploring exotic destinations to trying new foods and meeting new people, traveling has a way of
+        changing our perspectives and giving us a new appreciation for the world around us.</p>
+      <br>
+      <p class=" md:text-xl text-lg indent-12 text-justify ">
+        In this blog, I am excited to share about my travel experiences and some of the amazing places that I have
+        visited. As someone who loves to explore new places and cultures, I believe that travel is one of the most
+        enriching and rewarding experiences that we can have in our life. I have been fortunate enough to travel to some
+        incredible places, each with its own unique culture, history, and natural beauty.Whether you're an experienced
+        traveler or just starting to explore the world, I hope that my blog will inspire you to discover new
+        destinations,
+        try new things, and embrace the wonder and adventure of travel. So sit back, relax, and join me on a journey of
+        discovery and exploration. I hope that my experiences inspire you to explore the places and discover your own
+        unique adventures.
+      </p>
+    </div>
+
+
+    <!------------- main story ------------------->
+    <div class="mx-4 py-2 ">
+
+      <!-------- jyamdi kavre --------->
+      <div class="mx-4 py-2 ">
+
+
+        <div>
+
+
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-4  md:my-8 my-4">
+
+            <!------------- modal ------------>
+            <div
+              class="block  space-y-4 sm:flex sm:space-y-0 sm:space-x-4 cursor-pointer lg:col-span-1 flex sm:items-center  "
+              data-modal-target="travelling-image1" data-modal-toggle="travelling-image1">
+
+              <img src="./travelling-img/jyamdi3.jpg" alt="" class="w-[100%]  object-cover rounded-lg">
+
+
+            </div>
+            <div id="travelling-image1" tabindex="-1"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+              <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+                <!-- Modal content -->
+                <div class="relative rounded-lg shadow ">
+                  <div class="lg:col-span-1 flex sm:items-center ">
+                    <img src="./travelling-img/jyamdi3.jpg" alt="" class="w-[100%] object-cover">
+                  </div>
+
+                </div>
+                <div class="   border-gray-200 rounded-b ">
+                  <button data-modal-hide="travelling-image1" type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="lg:col-span-2 py- sm:py-2 ">
+
+              <h1 class="text-center font-bold text-xl my-3 md:text-2xl ">Jyamdi Stupa</h1>
+              <p class=" sm:px-4 lg:px-8  md:text-xl text-lg indent-12 text-justify">Jyamdi Stupa is a hidden gem in the
+                Kavreplanchok district of Nepal that offers a unique and off-the-beaten-path experience for travelers.
+                The stupa is located at an altitude of 3428m, making it an ideal destination for adventure seekers and
+                nature enthusiasts alike. The journey to Jyamdi Stupa is not for the faint-hearted, as it can only be
+                reached via an off-road route. However, the rugged terrain adds to the charm of the place, and the
+                picturesque views along the way are truly breathtaking.
+
+                The area around Jyamdi Stupa is characterized by lush greenery and tranquil surroundings, making it a
+                peaceful retreat from the hustle and bustle of city life. The stupa itself is a beautiful structure that
+                exudes a sense of calm and spirituality. Visitors can spend hours exploring the intricate details of the
+                stupa and admiring the stunning views of the surrounding landscape.</p>
+            </div>
+          </div>
+
+
+          <!------- carousel ------->
+          <div id="travelling-carousel2" class="relative" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-56 lg:h-92 md:h-80 sm:h-76 overflow-hidden rounded-lg ">
+              <!-- Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./travelling-img/jyamdi1.jpg"
+                  class="absolute block  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover rounded-lg    sm:w-[300px] md:w-[400px] lg:w-[500px] md:h-80 sm:h-76 h-56"
+                  alt="...">
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./travelling-img/jyamdi2.jpg"
+                  class="absolute block  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover  rounded-lg sm:w-[350px] md:w-[480px] md:h-80 sm:h-76 h-56"
+                  alt="...">
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="./travelling-img/jyamdi4.jpg"
+                  class="absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover rounded-lg  sm:w-[300px] md:w-[400px] md:h-80 sm:h-76 h-56"
+                  alt="...">
+              </div>
+
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                data-carousel-slide-to="0"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                data-carousel-slide-to="1"></button>
+              <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                data-carousel-slide-to="2"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button"
+              class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-prev>
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+            <button type="button"
+              class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+              data-carousel-next>
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+
+
+
+          <div class="   md:text-xl text-lg  text-justify">
+            <p class="indent-12">Sure, here's a more detailed description of Jyamdi Stupa that
+              you can use for your blog:
+
+              Jyamdi Stupa is a hidden gem in the Kavreplanchok district of Nepal that offers a unique and
+              off-the-beaten-path experience for travelers. The stupa is located at an altitude of 3428m, making it an
+              ideal destination for adventure seekers and nature enthusiasts alike. The journey to Jyamdi Stupa is not
+              for the faint-hearted, as it can only be reached via an off-road route. However, the rugged terrain adds
+              to the charm of the place, and the picturesque views along the way are truly breathtaking.
+
+              The area around Jyamdi Stupa is characterized by lush greenery and tranquil surroundings, making it a
+              peaceful retreat from the hustle and bustle of city life. The stupa itself is a beautiful structure that
+              exudes a sense of calm and spirituality. Visitors can spend hours exploring the intricate details of the
+              stupa and admiring the stunning views of the surrounding landscape.
+
+              One of the highlights of Jyamdi Stupa is the panoramic view it offers of the Panchkal municipality and
+              Melamgi. From the stupa's vantage point, visitors can see the entire municipality and the winding Melamgi
+              River, making it a truly spectacular sight, especially during sunrise and sunset.
+
+              For those looking to spend the night, Jyamdi Stupa is an excellent choice. The serene and peaceful
+              surroundings provide a perfect ambiance for a relaxing and rejuvenating stay. Visitors can camp out under
+              the stars and wake up to the sounds of nature or stay in one of the few nearby lodges.
+
+              Jyamdi Stupa is a hidden gem in Nepal that is perfect for adventurous travelers and nature
+              enthusiasts. Its off-road location, green surroundings, and breathtaking views make it an ideal place for
+              a night stay and to escape the hustle and bustle of city life. Whether you're looking for a unique
+              adventure or a peaceful retreat, Jyamdi Stupa is a must-visit destination in Nepal.
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <!-------- kathmandu  --------->
+      <div class="mx-4 py-2 ">
+
+        <div>
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-4  md:my-8 my-4">
+
+            <!------------- modal ------------>
+            <div
+              class="block  space-y-4 sm:flex sm:space-y-0 sm:space-x-4 cursor-pointer lg:col-span-1 flex sm:items-center  "
+              data-modal-target="travelling-image1" data-modal-toggle="travelling-image1">
+
+              <img src="./travelling-img/swambhu2.jpg" alt="" class="w-[100%]  object-cover rounded-lg">
+
+
+            </div>
+            <div id="travelling-image1" tabindex="-1"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+              <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+                <!-- Modal content -->
+                <div class="relative rounded-lg shadow ">
+                  <div class="lg:col-span-1 flex sm:items-center ">
+                    <img src="./travelling-img/swambhu2.jpg" alt="" class="w-[100%] object-cover">
+                  </div>
+
+                </div>
+                <div class="   border-gray-200 rounded-b ">
+                  <button data-modal-hide="travelling-image1" type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="lg:col-span-2 py- sm:py-2 ">
+
+              <h1 class="text-center font-bold text-xl my-3 md:text-2xl ">Swayambhu</h1>
+              <p class=" sm:px-4 lg:px-8  md:text-xl text-lg indent-12 text-justify">Swayambhu is a beautiful and
+                iconic Buddhist temple that stands atop a hill in Kathmandu Valley, Nepal. It is also known as the
+                Monkey Temple due to the hundreds of monkeys that call the area their home. The temple complex is
+                believed to have been built over 2,000 years ago, and it is an important pilgrimage site for both
+                Buddhists and Hindus.
+
+                The complex is characterized by a stunning white stupa that dominates the hilltop. The stupa is adorned
+                with intricate carvings and prayer flags that flutter in the wind, creating a mystical and spiritual
+                atmosphere. Visitors can climb the steep stairs to reach the top of the hill, where they are greeted by
+                breathtaking panoramic views of the city."</p>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-4  md:my-8 my-4">
+
+
+            <div class="lg:col-span-2 py- sm:py-2 ">
+
+
+              <p class=" sm:px-4 lg:px-8  md:text-xl text-lg  text-justify">Once at the top, visitors can explore the
+                temple complex and discover its many wonders. One of the most fascinating features of Swayambhu is the
+                presence of hundreds of monkeys that roam freely around the temple. These playful and curious creatures
+                add to the charm of the temple and make for some great photo opportunities.
+
+                Visitors can also circumambulate the stupa while spinning prayer wheels and chanting mantras. The
+                complex is also home to a number of smaller shrines and temples dedicated to various deities, including
+                Tara, the female Buddha of compassion.
+
+                Another must-visit attraction at Swayambhu is the Museum of Tibetan Buddhism, which houses a collection
+                of artifacts and artworks related to Buddhism. The museum provides an excellent insight into the history
+                and culture of Buddhism in Nepal and Tibet.</p>
+            </div>
+
+
+            <!------------- modal ------------>
+            <div
+              class="block  space-y-4 sm:flex sm:space-y-0 sm:space-x-4 cursor-pointer lg:col-span-1 flex sm:items-center  "
+              data-modal-target="travelling-image1" data-modal-toggle="travelling-image1">
+
+              <img src="./travelling-img/swambhu1.jpg" alt="" class="w-[100%]  object-cover rounded-lg">
+
+
+            </div>
+            <div id="travelling-image1" tabindex="-1"
+              class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+              <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+                <!-- Modal content -->
+                <div class="relative rounded-lg shadow ">
+                  <div class="lg:col-span-1 flex sm:items-center ">
+                    <img src="./travelling-img/swambhu1.jpg" alt="" class="w-[100%] object-cover">
+                  </div>
+
+                </div>
+                <div class="   border-gray-200 rounded-b ">
+                  <button data-modal-hide="travelling-image1" type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+          <div class="   md:text-xl text-lg  text-justify">
+            <p class="indent-12"> Swayambhu is a truly unique and awe-inspiring destination in Nepal. Its ancient
+              history, stunning architecture, and spiritual significance make it a must-visit site for anyone interested
+              in Buddhism, spirituality, or Nepalese culture. Whether you're climbing the steep stairs to the top or
+              admiring the playful monkeys, Swayambhu is sure to leave a lasting impression.
+
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+    <!------quote------------ -->
+    <div class="flex justify-center items-center my-10 ">
+      <div class=" bg-transparent border border-red-300 rounded-lg md:text-2xl text-xl sm:w-[60%] text-center p-4">
+        <p><span class="capitalize italic  text-blue-900"> "Life is short and the world is wide, the sooner you start exploring it, the better."</span><br> - Simon Raven.</p>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="flex justify-end">
+    <a href="./friends.html"><button type="button"
+        class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Next</button></a>
+
+  </div>
+
+  <footer class="p-2 bg-white shadow md:flex md:items-center md:justify-between md:p-2 dark:bg-gray-800">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex items-center  "> <a
+        href="./index.html"><img src="/img/bloglogo.png" alt="" class="h-6 rounded-lg sm:h-8 md:ml-4"></a>.© 2023 All
+      Rights Reserved.
+    </span>
+    <div class=" flex flex-wrap items-center">
+      <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+        </li>
+        <li>
+          <a href="./contact.html" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+      <button
+        class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center md:mr-2 mx-2 sm:mx-6 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Subscribe</button>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
