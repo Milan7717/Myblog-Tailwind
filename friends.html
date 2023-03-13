@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Milan - A story to be told.</title>
+</head>
+
+<body>
+
+
+
+  <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+    <div class="container-fluid flex flex-wrap items-center justify-between mx-auto">
+      <a href="./index.html" class="flex items-center">
+
+        <img src="./img/bloglogo.png" class="h-10 rounded-lg sm:h-12 md:ml-4" alt="Flowbite Logo" />
+
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button"
+        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul
+          class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-xl  md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="./index.html"
+              class="block py-2 pl-3 pr-4 text-gray-700  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="./blog.html"
+              class="block py-2 pl-3 pr-4  sm:text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
+          </li>
+          <li>
+            <a href="./portfolio.html"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="./contact.html"
+              class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-------------- carousel ---------->
+  <div id="friends-carousel" class="relative" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 lg:h-[692px] overflow-hidden rounded-lg sm:h-96">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./friends-img/bca2.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover object-center lg:h-[692px] sm:h-96 h-56"
+          alt="...">
+      </div>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./friends-img/newones.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover object-center lg:h-[692px] sm:h-96 h-56"
+          alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./friends-img/schoolfrds.jpg"
+          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover object-center lg:h-[692px] sm:h-96 h-56"
+          alt="...">
+      </div>
+
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+        data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+        data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+        data-carousel-slide-to="2"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button"
+      class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev>
+      <span
+        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+          stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button type="button"
+      class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next>
+      <span
+        class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+          stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
+  </div>
+
+
+  <div class="p-4">
+    <h1 class="text-center font-bold text-2xl mt-3 mb-6 md:text-4xl underline">Friendship: A Lifeline in Tough Times
+    </h1>
+    <div class=" p-2 ">
+      <p
+        class="md:text-xl text-lg indent-12 text-justify first-letter:text-7xl first-letter:font-bold first-letter:text-black dark:first-letter:text-black first-letter:mr-3">
+        Friendship is a close and meaningful relationship between two or more people who share mutual trust, support,
+        and understanding. It is characterized by mutual affection, loyalty, and a willingness to be there for one
+        another in good times and bad. At the heart of friendship lies a deep sense of connection and intimacy that
+        transcends the superficialities of social convention. Friends often share common interests, values, and
+        experiences, and they engage in activities together that bring them joy and fulfillment. Whether it is going to
+        the movies, taking a hike, or simply chatting over coffee, friends find meaning and enjoyment in spending time
+        together.</p>
+      <br>
+      <p class="md:text-xl text-lg  text-justify ">True friendship is built on a foundation of honesty, respect, and
+        kindness. Friends are honest with one
+        another, even when the truth is hard to hear. They respect each other's opinions and boundaries, and they treat
+        each other with kindness and compassion. They understand each other's flaws and imperfections, and they accept
+        each other for who they are, flaws and all.</p>
+    </div>
+
+
+    <!------quote------------ -->
+    <div class="flex justify-center items-center my-10 ">
+      <div class=" bg-transparent border border-red-300 rounded-lg md:text-2xl text-xl sm:w-[60%] text-center p-4">
+        <p>As the philosopher Aristotle once said,<span class="capitalize italic  text-blue-900"> "In poverty and other
+            misfortunes of life, true friends are a sure
+            refuge. They keep the young out of mischief; they comfort and aid the old in their weakness, and they incite
+            those in the prime of life to noble deeds."</span></p>
+      </div>
+    </div>
+
+    <!-- ----types of friendship ------>
+    <div class="p-2">
+      <div class="md:text-xl text-lg  text-justify">
+        <p class="indent-12">Friendship comes in many forms, and each type of friendship offers its own unique benefits
+          and challenges. From
+          childhood friends to work friends, social friends to best friends, there are many different types of
+          relationships that fall under the umbrella of "friendship." In this article, we will explore some of the most
+          common types of friendships and what makes each one special. Whether you're looking to strengthen existing
+          friendships or cultivate new ones, understanding the different types of friendships can help you build deeper
+          and more meaningful connections with the people in your life.
+        </p>
+        <br>
+        <p><span class="font-bold underline"> Childhood friends : </span> These are the friends we make when we are
+          still
+          developing, like in
+          elementary school or through kid-related activities. Childhood friends can give us a sense
+          of familiarity and comfort because they frequently share significant memories and
+          experiences with us.Childhood friends are those friends that you have known since your early years, often from
+          your school or neighborhood. These friends have been a part of your life for a long time, and you may have
+          shared many milestones and experiences with them, such as birthdays, holidays, and childhood adventures.
+
+          Childhood friends tend to have a deep sense of familiarity and comfort with each other. Even if you haven't
+          seen
+          each other in a while, you may be able to pick up right where you left off, as if no time has passed at all.
+          Childhood friends often have a shared history and a strong bond, and they may feel like family to each other.
+        </p>
+      </div>
+
+      <div class="flex justify-center flex-wrap gap-2  my-4 ">
+
+
+        <!------------- modal ------------>
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image1" data-modal-toggle="friends-image1">
+
+
+          <img src="./friends-img/childhood1.JPG" alt=""
+            class="sm:h-[300px] md:h-[300px] h-[150px] rounded-lg  object-cover object-center">
+
+
+        </div>
+        <div id="friends-image1" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex sm:items-center">
+
+              <img src="./friends-img/childhood1.JPG" alt="" class=" w-[100%] object-cover object-center">
+
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image1" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <!------------- modal ------------>
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image3" data-modal-toggle="friends-image3">
+
+
+          <img src="./friends-img/childhood3.jpg" alt=""
+            class="sm:h-[300px] md:h-[300px] h-[150px] rounded-lg  object-cover object-center">
+
+
+        </div>
+        <div id="friends-image3" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex sm:items-center">
+              <img src="./friends-img/childhood3.jpg" alt="" class=" w-[100%] object-cover object-center">
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image3" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <!------------- modal ------------>
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image2" data-modal-toggle="friends-image2">
+
+
+          <img src="./friends-img/childhood2.jpg" alt=""
+            class="sm:h-[300px] md:h-[300px] h-[150px] rounded-lg  object-cover object-center">
+
+
+        </div>
+        <div id="friends-image2" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex sm:items-center">
+              <img src="./friends-img/childhood2.jpg" alt="" class=" w-[100%] object-cover object-center">
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image2" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="my-4  md:text-xl text-lg  text-justify">
+        <p class="indent-12">One of the benefits of childhood friendships is that they can provide a sense of continuity
+          and stability in your life. As you navigate the challenges of growing up and transitioning into adulthood,
+          childhood friends can be a source of support, encouragement, and understanding. They may also provide a sense
+          of
+          nostalgia and a reminder of simpler times.</p>
+      </div>
+
+
+      <!------------ friends from school ------------->
+
+
+      <div class=" md:text-xl text-lg text-justify ">
+
+        <p><span class="font-bold underline"> School friends : </span> School friends are those friends that you meet
+          through your education, whether in high school, college, or graduate school. These friends may share similar
+          academic interests, and they often have a strong sense of camaraderie as they navigate the challenges of
+          academic life together.
+
+          School friends can be an important source of support and encouragement during your academic journey. They may
+          help you study for exams, share class notes and resources, and provide a sounding board for your academic
+          ideas
+          and projects. School friends may also offer a sense of community and belonging during a time when you may feel
+          overwhelmed or isolated.</p>
+        <br>
+        <p>
+          In addition to academic support, school friends may also provide a social outlet during your school years. You
+          may bond over shared extracurricular activities, such as sports teams or clubs, or you may simply hang out and
+          socialize during breaks between classes. School friends may also introduce you to new experiences and
+          perspectives, helping you to broaden your horizons and expand your worldview.
+
+          As you transition out of school and into the workforce, you may find that some of your school friendships
+          naturally fade away. However, with effort and intention, school friendships can endure and evolve into
+          long-lasting, meaningful relationships. Whether you stay in touch through social media, occasional meetups, or
+          even regular phone calls or video chats, school friends can provide a valuable connection to your past and a
+          reminder of the shared experiences that shaped your academic journey.
+        </p>
+
+      </div>
+
+      <div class="flex justify-center flex-wrap gap-2 my-4 ">
+
+        <!------------- modal 1 ------------>
+        <div class="block space-y-4  md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 items-center"
+          data-modal-target="friends-image4" data-modal-toggle="friends-image4">
+
+
+          <img src="./friends-img/school1.jpg" alt=""
+            class="sm:h-[300px] h-[150px] rounded-lg object-cover object-center">
+
+
+        </div>
+        <div id="friends-image4" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative  rounded-lg shadow  lg:col-span-1 flex sm:items-center">
+              <img src="./friends-img/school1.jpg" alt="" class=" w-[100%] object-cover object-center">
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image4" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!------------- modal 2------------>
+        <div class="block space-y-4 flex md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image5" data-modal-toggle="friends-image5">
+
+
+          <img src="./friends-img/school2.jpg" alt=""
+            class="sm:h-[300px]  h-[150px] rounded-lg object-cover object-center">
+
+
+        </div>
+        <div id="friends-image5" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex items-center max-w-[100%]">
+              <img src="./friends-img/school2.jpg" alt="" class=" w-[100%] object-cover object-center">
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image5" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <!------------- modal 3 ------------>
+
+
+      </div>
+
+
+      <div class="flex justify-center flex-wrap gap-2 my-4 ">
+
+        <!------------- modal ------------>
+        <div class="block space-y-4  md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image6" data-modal-toggle="friends-image6">
+
+
+          <img src="./friends-img/school3.jpeg" alt=""
+            class="sm:h-[300px]  h-[150px] rounded-lg object-cover object-center">
+
+
+        </div>
+        <div id="friends-image6" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex items-center max-w-[100%]">
+              <img src="./friends-img/school3.jpeg" alt="" class=" w-[100%] object-cover object-center">
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image6" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!------------- modal ------------>
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image5" data-modal-toggle="friends-image5">
+
+
+          <img src="./friends-img/old-frds.jpg" alt=""
+            class="sm:h-[300px]  h-[150px] rounded-lg object-cover object-center">
+
+
+        </div>
+        <div id="friends-image5" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex items-center max-w-[100%]">
+              <img src="./friends-img/old-frds.jpg" alt="" class=" w-[100%] object-cover object-center">
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image5" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <!------------- modal ------------>
+        <div class="block space-y-4  md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image7" data-modal-toggle="friends-image7">
+
+
+          <img src="./friends-img/liverpooolfrds.jpeg" alt=""
+            class="sm:h-[300px]  h-[150px] rounded-lg object-cover  object-center">
+
+
+        </div>
+        <div id="friends-image7" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative  rounded-lg shadow  lg:col-span-1 flex sm:items-center">
+              <img src="./friends-img/liverpooolfrds.jpeg" alt="" class=" w-[100%] object-cover  object-center">
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image7" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+      <!------- online friend ------>
+      <div class="  my-4  md:text-xl text-lg  text-justify">
+        <p><span class="font-bold underline">Online friends : </span>Online friends are those friends that
+          you meet through online communities or social media. These friends may share common interests, hobbies, or
+          beliefs, and they may communicate primarily through messaging apps or social media platforms.
+          One of the benefits of online friendships is that they can offer a sense of connection and community,
+          regardless
+          of geographical distance. Online friends may provide a safe space to discuss shared interests, offer support
+          and
+          encouragement, and exchange ideas and perspectives. Online friendships can also provide a sense of anonymity
+          and
+          privacy, allowing people to connect and communicate in a way that feels comfortable and low-pressure.
+          Online friendships can also be a valuable source of support during difficult times, such as periods of social
+          isolation or mental health challenges. For people who may struggle to make connections in person, online
+          friendships can be a lifeline, providing a sense of belonging and understanding that might be difficult to
+          find
+          elsewhere.
+        </p>
+      </div>
+
+
+      <!------ best friend ---->
+      <div class="  my-4  md:text-xl text-lg  text-justify">
+        <p><span class="font-bold underline">Best friends : </span>Best friends are those friends that you
+          have a deep and enduring bond with, often characterized by mutual trust, respect, and understanding. Best
+          friends may share similar interests and values, and they often have a long history of shared experiences and
+          memories.
+
+          One of the benefits of having a best friend is that they can provide a source of unconditional love and
+          support.
+          Best friends are often the people you turn to in times of joy and sorrow, celebration and grief. They may
+          offer
+          a listening ear, a shoulder to cry on, or simply a comforting presence during difficult times.
+
+          Best friends may also provide a sense of accountability and motivation. They may challenge you to be your best
+          self, hold you accountable to your goals and values, and push you to try new things and take risks. Best
+          friends
+          may also serve as role models or mentors, inspiring you to reach your full potential and become the best
+          version
+          of yourself.
+        </p>
+        <br>
+
+      </div>
+
+
+      <div class="flex justify-center flex-wrap gap-2  my-4">
+
+        <!------------- modal ------------>
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image8" data-modal-toggle="friends-image8">
+
+
+          <img src="./friends-img/bca.jpg" alt="" class="sm:h-[300px] h-[150px] rounded-lg  object-cover object-center">
+
+
+        </div>
+        <div id="friends-image8" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex sm:items-center">
+
+              <img src="./friends-img/bca.jpg" alt="" class=" w-[100%] object-cover object-center">
+
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image8" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!------------- modal ------------>
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image9" data-modal-toggle="friends-image9">
+
+
+          <img src="./friends-img/bestfrd2.JPG" alt=""
+            class="sm:h-[300px] h-[150px] rounded-lg  object-cover object-center">
+
+
+        </div>
+        <div id="friends-image9" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex sm:items-center">
+
+              <img src="./friends-img/bestfrd2.JPG" alt="" class=" w-[100%] object-cover object-center">
+
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image9" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!----------- modal -->
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image10" data-modal-toggle="friends-image10">
+
+
+          <img src="./friends-img/bestfrd3.jpg" alt=""
+            class="sm:h-[300px] h-[150px] rounded-lg  object-cover object-center">
+
+
+        </div>
+        <div id="friends-image10" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex sm:items-center">
+
+              <img src="./friends-img/bestfrd3.jpg" alt="" class=" w-[100%] object-cover object-center">
+
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image10" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+        <!--------- modal ------------->
+        <div class="block space-y-4 md:space-y-0 md:space-x-4 cursor-pointer lg:col-span-1 flex items-center"
+          data-modal-target="friends-image11" data-modal-toggle="friends-image11">
+
+
+          <img src="./friends-img/bestfrd4.jpg" alt=""
+            class="sm:h-[300px] h-[150px] rounded-lg  object-cover object-center">
+
+
+        </div>
+        <div id="friends-image11" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
+          <div class="relative w-full h-full max-w-7xl md:h-auto flex flex-col items-center justify-center">
+            <!-- Modal content -->
+            <div class="relative rounded-lg shadow lg:col-span-1 flex sm:items-center">
+
+              <img src="./friends-img/bestfrd4.jpg" alt="" class=" w-[100%] object-cover object-center">
+
+
+            </div>
+            <div class="  border-t border-gray-200 rounded-b dark:border-gray-600">
+              <button data-modal-hide="friends-image11" type="button"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:px-5 px-2 py-1 sm:py-2.5  text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Close</button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="my-4 md:text-xl text-lg  text-justify">
+        <p class="indent-12">Overall, having a best friend can be one of the most rewarding and fulfilling experiences
+          in
+          life. By sharing
+          life's ups and downs with someone who truly understands and supports you, you can create a sense of deep
+          connection and meaning that enriches every aspect of your life.</p>
+      </div>
+    </div>
+
+    <!------quote------------ -->
+    <div class="flex justify-center items-center my-10 ">
+      <div class=" bg-transparent border border-red-300 rounded-lg md:text-2xl text-xl sm:w-[60%] text-center p-4">
+        <p><span class="capitalize italic  text-blue-900"> "True friends are like diamonds - bright, beautiful, valuable, and always in style."</span><br> - Nicole Richie</p>
+      </div>
+    </div>
+
+    <!------------ comedy pics -------->
+    <div class="  my-4  md:text-xl text-lg  text-justify">
+      <h1 class="text-center font-bold text-2xl mt-6 mb-6 md:text-4xl underline">The Comedy of Friendship: Exploring the
+        Craziness of Friends</h1>
+      <p class="indent-12">Friendship is an essential component of human life that brings joy, comfort, and a sense of
+        belonging. Good friends are those who share your interests, support you in your endeavors, and celebrate your
+        successes.
+
+        Spending time with friends can be a source of laughter, relaxation, and stress relief. Whether it's going out
+        for coffee, taking a walk in the park, or having a movie night at home, being around friends can help you forget
+        about your worries and enjoy the present moment.
+
+        There's nothing quite like the laughter that comes from spending time with your friends. Whether it's
+        reminiscing about old times, sharing funny stories, or just being silly together, there's a special kind of
+        humor that only comes from the bond of friendship.
+
+        From inside jokes to pranks, friends have a way of bringing out the silliest and most spontaneous sides of
+        ourselves. It's the kind of laughter that's contagious and can leave you with aching cheeks and a sore stomach.
+
+      </p>
+
+      <!------- carousel ------->
+      <div id="friends-carousel2" class="relative" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 lg:h-92 md:h-80 sm:h-76 overflow-hidden rounded-lg ">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./friends-img/comedy1.jpg"
+              class="absolute block  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover rounded-lg    sm:w-[300px] md:w-[400px] lg:w-[500px] md:h-80 sm:h-76 h-56"
+              alt="...">
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./friends-img/comedy2.jpg"
+              class="absolute block  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover  rounded-lg sm:w-[350px] md:w-[480px] md:h-80 sm:h-76 h-56"
+              alt="...">
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="./friends-img/comedy3.jpg"
+              class="absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover rounded-lg  sm:w-[300px] md:w-[400px] md:h-80 sm:h-76 h-56"
+              alt="...">
+          </div>
+
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+            data-carousel-slide-to="0"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+            data-carousel-slide-to="1"></button>
+          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+            data-carousel-slide-to="2"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+
+      <p class="indent-12">Why do we find the craziness of our friends so hilarious? It could be because we feel
+        comfortable and safe around them, which allows us to let our guard down and be ourselves. Or it could be that we
+        enjoy the sense of camaraderie and connection that comes from sharing a good laugh.
+
+        Whatever the reason, the comedy that comes from our friendships is an important part of our lives. It helps us
+        relieve stress, boosts our mood, and strengthens our bonds with one another.</p>
+
+    </div>
+
+    <!------- importance of friendship ------>
+    <div class="my-4 md:text-xl text-lg  text-justify  p-2">
+      <h1 class="text-center font-bold text-2xl mt-6 mb-6 md:text-4xl underline">Importance of friendship</h1>
+      <p class="indent-12">Friendship is incredibly important for our overall well-being
+        and happiness. The emotional support that we receive from friends during times of stress and sadness is
+        invaluable, as is the sense of social connection and belonging that comes from having close friendships. Studies
+        have shown that having strong social connections can have a positive impact on both our mental and physical
+        health, from reducing symptoms of depression and anxiety to improving immune function and lowering blood
+        pressure. Moreover, friendships can challenge us to learn and grow as individuals, inspiring us to become our
+        best selves. Overall, investing in our friendships and cultivating strong, meaningful relationships with others
+        is an essential part of leading a happy, healthy, and fulfilling life.
+
+      </p>
+      <br>
+      <p>
+        In addition to the benefits outlined above, friendship plays an important role in our personal and professional
+        lives. For example, having a strong network of friends can provide valuable social support and resources,
+        whether we're looking for career opportunities, advice on personal matters, or help with a specific project or
+        task. Similarly, friendships can help us develop key interpersonal skills, such as communication, empathy, and
+        conflict resolution, that are crucial for success in both personal and professional contexts.
+
+        Friendship also has the power to bring people from diverse backgrounds and experiences together, fostering a
+        sense of understanding and empathy across social, cultural, and political divides. By building bridges of
+        connection and compassion between individuals and communities, friendship can help create a more just,
+        equitable, and peaceful world.
+      </p>
+      <p class="indent-12">
+        Overall, the importance of friendship cannot be overstated. Whether we're seeking emotional support, social
+        connection, personal growth, or professional success, the bonds of friendship provide us with the strength,
+        resources, and motivation we need to thrive in all areas of our lives.
+
+      </p>
+    </div>
+
+    <!-- honesty need in friendship -->
+    <div class="my-4 md:text-xl text-lg  text-justify  p-2">
+      <h1 class="text-center font-bold text-2xl mt-6 mb-6 md:text-4xl underline">Why Honesty is Important in
+        Friendships?</h1>
+      <p class="indent-12">
+        Honesty is crucial for building and maintaining healthy friendships. It is an essential component of trust,
+        which is the foundation of any healthy relationship. When we are honest with our friends, we create a safe space
+        for open communication and sharing. Honesty allows us to be our authentic selves, without fear of judgment or
+        rejection. This vulnerability can deepen our connection with friends and strengthen our relationships.
+
+        Honesty is also crucial for resolving conflicts in a healthy and productive way. When we are honest about our
+        feelings and needs, we can address issues and find solutions that work for everyone involved. This leads to a
+        deeper level of mutual understanding and respect.
+
+        Furthermore, honesty is a sign of respect for our friends. It shows that we value their opinions and feelings
+        enough to be truthful with them. By being honest, we demonstrate that we trust and respect our friends enough to
+        be open and transparent with them.
+      </p>
+      <p class="indent-12">
+        In the end, honesty is an essential component of building strong, meaningful friendships that last. By being
+        honest with each other, we can deepen our connection, build trust, and create a sense of mutual respect and
+        understanding that can withstand the ups and downs of life.
+      </p>
+    </div>
+
+
+    <!----- conclusion -------->
+    <div class="my-4 md:text-xl text-lg  text-justify  p-2">
+      <h1 class="text-center font-bold text-2xl mt-6 mb-6 md:text-4xl underline">Conclusion</h1>
+      <p class="indent-12">
+        In conclusion, friendship is a crucial aspect of our lives that provides us with emotional support, social
+        connection, personal growth, and professional success. There are various types of friendships, including
+        childhood friends, school friends, online friends, and best friends, each of which offers unique benefits and
+        experiences. Honesty is an essential component of any healthy friendship, as it builds trust, authenticity,
+        mutual respect, and enables us to resolve conflicts in a healthy and productive way. Overall, investing in our
+        friendships and cultivating strong, meaningful relationships with others is an essential part of leading a
+        happy, healthy, and fulfilling life.
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="flex justify-start">
+    <a href="./travelling.html"><button type="button"
+        class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">previous</button></a>
+
+  </div>
+
+
+  <div class="flex justify-end">
+    <a href="./love.html"><button type="button"
+        class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Next</button></a>
+
+  </div>
+
+  <footer class="p-2 bg-white shadow md:flex md:items-center md:justify-between md:p-2 dark:bg-gray-800">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex items-center  "> <a
+        href="./index.html"><img src="/img/bloglogo.png" alt="" class="h-6 rounded-lg sm:h-8 md:ml-4"></a>.© 2023 All
+      Rights Reserved.
+    </span>
+    <div class=" flex flex-wrap items-center">
+      <ul class="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+        </li>
+        <li>
+          <a href="/contact.html" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+      <button
+        class="  text-white bg-red-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center md:mr-2 mx-2 sm:mx-6 dark:bg-red-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Subscribe</button>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
